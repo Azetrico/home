@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans';
+}
+header {
+    background-color: transparent;
+    padding: 10px 30px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    max-width: 100%;
+    transition-duration: 0.4s;
+}
+header img {
+    height: 40px;
+    float: left;
+}
+#title {
+    font-size: 25px;
+    font-family: 'Oswald';
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1;
+    max-width: 320px;
+}
+#title span {
+    position: relative;
+    top: 7px;
+    margin-left: 10px;
+}
+header nav {
+    position: absolute;
+    top: 15px;
+    right: 100px;
+}
+header nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0px 10px;
+}
+header nav a:hover {
+    color: slategray;
+}
+
+.coverScroll {
+    background-color: white;
+    color: black;
+    box-shadow: 0px 1px 10px grey;
+    transition-duration: 0.4s;
+}
+.coverScroll a {
+    color: black;
+}
+.coverScroll #title {
+    color: black;
+}
+
+#wrapper {
+    background-color: white;
+}
+#banner {
+    background-color: black;
+    background-image: url('background.png');
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+#banner div {
+    margin: 0;
+    text-transform: uppercase;
+    color: white;
+    font-family: 'Oswald', sans-serif;
+    font-weight: light;
+    text-align: center;
+    border-bottom: tomato 10px solid;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#banner div h1 {
+    margin: 0;
+    font-size: 80px;
+    font-weight: 400;
+    line-height: 90px;
+    word-break: break-word;
+}
+
+#content {
+    padding: 15px 8%;
+    font-size: 18px;
+}
+
+a {
+    color: black;
+    text-decoration: underline;
+}
+a:hover {
+    color: tomato;
+}
+
+.slidesButtons a {
+    border: rgb(214, 92, 70) solid;
+    padding: 7px;
+    border-radius: 5px;
+    background-color: tomato;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    
+}
+.slidesButtons a:hover {
+    background-color: rgb(214, 92, 70);
+}
+
+.slide {
+    display: none;
+}
