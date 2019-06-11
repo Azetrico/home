@@ -1,33 +1,51 @@
 <html>
 <head>
-    <title>Apply for AWD</title>
+    <title>Android App Store</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Oswald|Roboto" rel="stylesheet">
     <link href="style.css" rel="stylesheet" />
     <link href="favicon.ico" rel="icon" />
+    <style>
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 40%;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+</style>
 </head>
 <body>
     <header>
         <a href="index.html" id="title">
             <img src="logo.png" />
-            <span>Azetrico</span>
+            <span>Azetrico Apps for Android</span>
         </a>
         </div>
         <nav>
             <a href="index.html">Home</a>
             <a href="agenda.html">Agenda</a>
-            <a href="application.html">Apply</a>
+            <a href="application.html">Store</a>
         </nav>
     </header>
     <div id="wrapper">
         <div id="banner">
-            <div><h1>Apply for AWD</h1></div>
+            <div><h1>Azetrico Apps for Android</h1></div>
         </div>
-        <div id="content">
-            <p>Do you want to become an Azetrico Web Developer? If so, apply below.</p>
-            <p> Coming soon... </p>
-        </div>
+        <div class="card">
+  <img src="img/store/ref/momento.png" alt="Momento" style="width:100%">
+  <div class="container">
+    <h4><b>Momento</b></h4> 
+    <p>Web browser for Apex</p> 
+  </div>
+</div>
     </div>
     <script src="script.js"></script>
 </body>
