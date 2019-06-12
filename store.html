@@ -8,17 +8,56 @@
     <link href="favicon.ico" rel="icon" />
     <style>
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  transition: 0.3s;
-  width: 250;
+  box-shadow: 0px 0px 21px 0px rgba(0,0,0,0.75);
+  transition: all 0.3s;
+  width: 100;
+  height: 165;
+  border-radius: 25px;
+  padding: 30px;
+  margin: 2vw;
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 66px 0px rgba(0,0,0,0.75);
+  transform: scale(1.05);
 }
 
 .container {
   padding: 2px 16px;
+  height: 50px;
+  transition: height 0.3s;
+}
+
+.appLink {
+	text-decoration:none;
+	transition: all 0.25s;
+}
+.appLink:hover {
+	transform: scale(1.1);
+}
+.card:active {
+	transform: scale(0.8);
+	box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.75);
+}
+.wideCard {
+	height: 225px;
+}
+.installButton {
+	transform: scale(0);
+	transition: all 0.3s;
+	border-radius: 20px;
+	background-color: #3399ff;
+	border: none;
+	color: #ffffff;
+	margin: auto;
+	padding: 25%;
+}
+.installButton:active {
+	filter: brightness(0.5);
+	transform: scale(1.25);
+}
+.shown {
+	transform: scale(1);
 }
 </style>
 </head>
@@ -39,14 +78,25 @@
         <div id="banner">
             <div><h1>Azetrico Apps for Android</h1></div>
         </div>
-        <div class="card">
-  <img src="img/store/ref/MomentoPNG.png" alt="Momento" style="width:250">
-  <div class="container">
-      <h4><a href="/momento/install"><b>Momento</b></a></h4> 
-    <p>Web browser for Apex</p>
-  </div>
+        <div id="momentocard" onclick="MomentoDownloadClick()" class="card">
+		  <img src="img/store/ref/MomentoPNG.png" alt="Momento" style="width:100;margin-bottom:20px;pointer-events:none;">
+		  <div class="container">
+			  <p class="appLink" style="pointer-events:none;">Momento</p></a>
+			<button id="installButton" class="installButton">Install</button>
+		  </div>
 </div>
     </div>
     <script src="script.js"></script>
+	<script>
+		var MomentoCard = document.getElementById('momentocard');
+		var MomentoInstall = document.getElementById('installButton');
+		function MomentoDownloadClick() {
+			MomentoCard.classList.toggle('wideCard');
+			MomentoInstall.classList.toggle('shown');
+		}
+		MomentoInstall.onclick = function() {
+			window.location.href = "momento/momento.apk"
+		}
+	</script>
 </body>
 </html>
